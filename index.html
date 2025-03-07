@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="../scripts/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav" aria-label="Main Navigation">
+            <h1 class="header__title">CinePick</h1>
+            <ul class="header__nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../pages/recommendation.html">MOVIE ROULETTE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Movie Recommendations</h1>
+            <p class="hero__text">You can’t decide between thousands of movies available for streaming?</p>
+            <p class="hero__text">Let us do the work!</p>
+        </div>
+    </section>
+
+    <section class="movies">
+        <div class="movies__container">
+            <div id="movie__cards" class="movie__cards"></div>
+        </div>
+        <div class="movies__content">
+            <h2 class="movies__heading">The Smart Way To Pick A Movie.</h2>
+            <p class="movies__text">Watching movies is fun, but figuring out what to watch next can be a nerve-wracking experience. Endless scrolling through Netflix, watching trailers on YouTube, checking IMDb ratings, wasting half an hour and still unable to decide on a movie. Sound familiar?</p>
+            <p class="movies__text">Then you have landed on the right page! CinePick’s movie recommendation engine is the answer to the question “What movie should I watch next?”! Your movie selection process is about to get much easier.</p>
+            <p class="movies__text">CinePick quickl finds the perfect movie based on your mood, occasion and individual preferences in just a few minutes! Whether you’re watching a movie by yourself, joining a movie night with friends or going on a movie date with your crush – CinePick will guide you to an awesome choice!</p>
+            <p class="movies__text movies__text--bold">Give it a try! If you like it, please share it! If not, we highly appreciate any kind of feedback.</p>
+        </div>
+        <a class="button" href="./pages/recommendation.html">Pick a Movie</a>
+    </section>
+    <section class="search">
+        <input class="search__input" type="text" id="movie-search" placeholder="Search for a movie...">
+        <button type="submit" onclick="searchMovie()">Search</button>
+        <div id="search-results" class="search-results"></div>
+    </section>
+    <footer class="footer">
+        <div class="footer__contact">
+            <h2 class="footer__heading">Contact Us</h2>
+            <h3 class="footer__subheading">CinePick Management</h3>
+            <p class="footer__text">info@CinePick.com</p>
+            <p class="footer__text">Copyright CinePick &copy; 2025 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
