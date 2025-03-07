@@ -1,0 +1,57 @@
+<!-- genre.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Pick a Movie</title>
+    <link rel="stylesheet" href="../styles/recommend.css">
+    <script src="../scripts/recommend.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav" aria-label="Main Navigation">
+            <h1 class="header__title">CinePick</h1>
+            <ul class="header__nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="./recommendation.html">MOVIE ROULETTE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Movie Roulette</h1>
+            <p class="hero__text">Wondering what to watch for movie night?</p>
+            <span>Let CinePick, your personal movie generator randomly choose for you!</span>
+            <p class="hero__text">Sit back, relax, and enjoy the surprise!</p>
+        </div>
+    </section>
+
+    <section class="genre-selection">
+        <h2>Select a Genre</h2>
+        <select id="genre">
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="horror">Horror</option>
+            <option value="romance">Romance</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="thriller">Thriller</option>
+        </select>
+        <button type="button" onclick="getMovieSuggestion()">Surprise Me!</button>
+        <div id="movie-suggestion"></div>
+    </section>
+    <footer class="footer">
+        <div class="footer__contact">
+            <h2 class="footer__heading">Contact Us</h2>
+            <h3 class="footer__subheading">CinePick Management</h3>
+            <p class="footer__text">info@CinePick.com</p>
+            <p class="footer__text">Copyright CinePick &copy; 2025 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
