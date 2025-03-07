@@ -1,0 +1,214 @@
+@use "./variables.scss" as *;
+@use "./mixins.scss" as *;
+@use "./global.scss" as *;
+
+//Navbar Section
+.header {
+    background-color: $primary-color;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // width: 100%;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 24px;
+        color: $secondary-color;
+        font-weight: 700;
+    }
+
+    &__nav-links {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                font-weight: 600;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        &__nav {
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100%; 
+            width: 100%;
+        }
+
+        &__nav-links {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            gap: 1rem; 
+            width: 100%; 
+
+        &__title {
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+}
+
+// Hero Section (Home Page)
+.hero{
+    height: 31.25rem;
+    width: 100%;
+    margin-top: 0;
+    background-image: url("../assets/cinema.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    @include flex-center;
+    flex-direction: column;
+    filter: grayscale(55%);
+
+    &__content {
+        border-radius: 8px;
+        background-color: rgba(44, 62, 80, 0.7);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+        padding: 36px;
+    }
+
+    &__title{
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-radius: .375rem;
+    }
+
+    @media (max-width: 375px) {
+        &__title{
+            font-size: 20px;
+        }
+    }
+}
+
+.movies {
+    text-align: center;
+    padding: 2rem;
+    
+
+    &__card {
+        background: white;
+            padding: 1rem;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            text-align: center;
+            width: 220px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: calc($border-radius / 2);
+    }
+
+    &__content {
+        padding: 1rem;
+        margin-top: 1rem;
+        width: 60%;
+        @include flex-center;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__text {
+        text-align: left;
+
+        &--bold{
+            font-weight: bold;
+        }
+    }
+}
+
+#movie__cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.button {
+    @include button-style($accent-color, white);
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+
+// Search Section (Home Page)
+.search {
+    text-align: center;
+    padding: 2rem;
+
+    &__input {
+        padding: 0.5rem;
+        width: 250px;
+        border: 1px solid $primary-color;
+        border-radius: calc($border-radius / 2);
+        margin-bottom: 1rem;
+        @include mobile{
+            max-width: 30%;
+        }
+    }
+
+    button {
+        @include button-style($primary-color, white);
+    }
+
+    &-results {
+        margin-top: 1rem;
+        @include flex-center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .result {
+            background: white;
+            padding: 1rem;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            text-align: center;
+            width: 150px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: calc($border-radius / 2);
+            }
+
+            p {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}

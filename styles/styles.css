@@ -1,0 +1,226 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: left;
+  padding: 2rem;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.header {
+  background-color: #2c3e50;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header__title {
+  font-size: 24px;
+  color: #ecf0f1;
+  font-weight: 700;
+}
+.header__nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header__nav-links li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: 600;
+}
+@media (max-width: 375px) {
+  .header__nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .header__nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .header__nav-links__title {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hero {
+  height: 31.25rem;
+  width: 100%;
+  margin-top: 0;
+  background-image: url("../assets/cinema.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  filter: grayscale(55%);
+}
+.hero__content {
+  border-radius: 8px;
+  background-color: rgba(44, 62, 80, 0.7);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  padding: 36px;
+}
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-radius: 0.375rem;
+}
+@media (max-width: 375px) {
+  .hero__title {
+    font-size: 20px;
+  }
+}
+
+.movies {
+  text-align: center;
+  padding: 2rem;
+}
+.movies__card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+.movies__card:hover {
+  transform: translateY(-5px);
+}
+.movies__img {
+  width: 100%;
+  border-radius: 4px;
+}
+.movies__content {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+.movies__text {
+  text-align: left;
+}
+.movies__text--bold {
+  font-weight: bold;
+}
+
+#movie__cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #d62c1a;
+}
+
+.search {
+  text-align: center;
+  padding: 2rem;
+}
+.search__input {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid #2c3e50;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.search button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.search button:hover {
+  background-color: #1a252f;
+}
+.search-results {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.search-results .result {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px;
+}
+.search-results .result img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.search-results .result p {
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=styles.css.map */
